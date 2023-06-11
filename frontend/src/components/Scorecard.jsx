@@ -1,5 +1,7 @@
+import Frame from './Frame'
+
 const Scorecard = () => {
-  return <h1>Scorecard Time</h1>
+  return (<Frame/>)
 }
 
 export default Scorecard;
