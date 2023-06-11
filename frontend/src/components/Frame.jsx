@@ -1,5 +1,5 @@
-const Frame = () => {
-  return (<h1>Hello from Frame!!</h1>)
+const Frame = ({frame}) => {
+  return (<article class="frame" >{ frame }</article>)
 
 }
 
