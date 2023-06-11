@@ -1,5 +1,5 @@
 const Frame = ({frame}) => {
-  return (<article class="frame" >{ frame }</article>)
+  return (<article className="frame" >{ frame }</article>)
 
 }
 

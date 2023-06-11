@@ -1,11 +1,13 @@
-const express = require('express');
+const express = require('express')
+const cors = require('cors')
 const app = express();
 const port = 3000;
 
 const Scorecard = require('./src/scorecard.js');
 const scorecard = new Scorecard()
 
-app.use(express.json());
+//app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Bowling scorecard')
