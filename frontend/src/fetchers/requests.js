@@ -5,10 +5,7 @@ export const fetchFrames = async (setFrames) => {
     const response = await fetch("http://localhost:3000/scorecard");
     console.log(response)
     const data = await response.json();
-    const frameRolls = data.scorecard.map(
-      (frame) => (frame.rolls)
-    )
-    setFrames(frameRolls);
+    setFrames(data.scorecard);
   }
   catch(e) {
     console.log(e)
