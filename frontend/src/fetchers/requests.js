@@ -3,7 +3,6 @@
 export const fetchFrames = async (setFrames) => {
   try {
     const response = await fetch("http://localhost:3000/scorecard");
-    console.log(response)
     const data = await response.json();
     setFrames(data.scorecard);
   }

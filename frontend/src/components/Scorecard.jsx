@@ -18,6 +18,7 @@ const Scorecard = () => {
       const lastFrame = frames[lastFrameKey];
       if (lastFrame && lastFrame.score !== undefined) {
         setTotalScore(lastFrame.score);
+        fetchFrames(setFrames);
       } else {
         console.log("Unable to retrieve the score from the last frame");
       }
