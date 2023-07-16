@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/scorecard" element={<Scorecard />} />
+        <Route path="/" element={<Scorecard />} />
       </Routes>
     </Router>
   )

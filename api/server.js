@@ -6,7 +6,7 @@ const port = 3000;
 const Scorecard = require('./src/scorecard.js');
 const scorecard = new Scorecard()
 
-//app.use(express.json());
+app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
@@ -18,7 +18,7 @@ app.get('/scorecard', (req, res) => {
 })
 
 app.post('/frame', (req, res) => {
-  const { roll1, roll2, roll3 } = req.body;
+  const { roll1, roll2, roll3 = undefined } = req.body;
   const rolls = [roll1, roll2, roll3].filter(roll => roll !== undefined);
   
   scorecard.addFrame(...rolls);
