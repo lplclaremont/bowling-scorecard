@@ -20,5 +20,5 @@ export const postFrame = async () => {
     body: JSON.stringify({"roll1": 3,
     "roll2": 3})
   })
-  return response.json()
+  return response
 }

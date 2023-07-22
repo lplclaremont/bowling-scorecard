@@ -1,12 +1,11 @@
-import { fetchFrames } from '../fetchers/requests'
+import { fetchFrames, postFrame } from '../fetchers/requests'
 
 const AddFrame = ({setFrames}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    postFrame()
     fetchFrames(setFrames)
-    console.log("clicked the button bbe")
   }
-
 
   return(
     <form className="addFrame" onSubmit={ handleSubmit }>

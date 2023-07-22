@@ -9,28 +9,11 @@ const Scorecard = () => {
   const [totalScore, setTotalScore] = useState(0);
 
   useEffect(() => {
-    // fetchFrames(setFrames)
-    //const lastFrame = frames.slice(-1)
-    console.log(frames)
-    //setTotalScore(lastFrame.score)
-    console.log(totalScore)
+    if (frames.length !== 0) {
+      const lastFrame = frames.slice(-1)[0]
+      setTotalScore(lastFrame.score)
+    }
   }, [frames])
-  
-  // useEffect(() => {
-  //   const frameKeys = Object.keys(frames);
-  //   if (frameKeys.length > 0) {
-  //     const lastFrameKey = frameKeys[frameKeys.length - 1];
-  //     const lastFrame = frames[lastFrameKey];
-  //     if (lastFrame && lastFrame.score !== undefined) {
-  //       setTotalScore(lastFrame.score);
-  //       fetchFrames(setFrames);
-  //     } else {
-  //       console.log("Unable to retrieve the score from the last frame");
-  //     }
-  //   } else {
-  //     console.log("No frames available");
-  //   }
-  // }, [frames]);
   
   return (
     <>
