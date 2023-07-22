@@ -1,10 +1,17 @@
-const AddFrame = () => {
-  const handleOnClick = () => {
+import { fetchFrames } from '../fetchers/requests'
+
+const AddFrame = ({setFrames}) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetchFrames(setFrames)
     console.log("clicked the button bbe")
   }
 
+
   return(
-    <button onClick={handleOnClick}>Click me!</button>
+    <form className="addFrame" onSubmit={ handleSubmit }>
+      <input className="addFrameSubmit" type="submit" />
+    </form>
   )
 }
 
