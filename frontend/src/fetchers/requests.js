@@ -11,14 +11,16 @@ export const fetchFrames = async (setFrames) => {
   }
 }
 
-export const postFrame = async () => {
+export const postFrame = async (rolls) => {
   const response = await fetch("http://localhost:3000/frame", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({"roll1": 3,
-    "roll2": 3})
+    body: JSON.stringify({
+      "roll1": Number(rolls[0]),
+      "roll2": Number(rolls[1])
+    })
   })
   return response
 }

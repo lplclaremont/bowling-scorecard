@@ -11,6 +11,7 @@ const Scorecard = () => {
   useEffect(() => {
     if (frames.length !== 0) {
       const lastFrame = frames.slice(-1)[0]
+      console.log(lastFrame)
       setTotalScore(lastFrame.score)
     }
   }, [frames])
