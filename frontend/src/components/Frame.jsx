@@ -1,6 +1,5 @@
 const Frame = ({frame}) => {
-  return (<article className="frame" >{ frame }</article>)
-
+  return (<div className="frame" >{ frame }</div>)
 }
 
 export default Frame;

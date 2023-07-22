@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Frame from './Frame'
+import AddFrame from './addFrame'
 import { fetchFrames } from '../fetchers/requests'
 
 const Scorecard = () => {
@@ -29,11 +30,12 @@ const Scorecard = () => {
   
   return (
     <>
-    <p id="frames">
+    <div id="frames">
       {frames.map(
         frame => (<Frame frame={ frame.rolls }/>)
       )}
-    </p>
+      <AddFrame/>
+    </div>
 
     <div id="score">
       <p>Total:</p>
