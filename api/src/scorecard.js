@@ -23,7 +23,7 @@ class Scorecard {
   }
 
   reset() {
-    // this.frames = []
+    this.frames = []
   }
 
   show() {

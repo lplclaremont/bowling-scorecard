@@ -184,6 +184,24 @@ describe('Scorecard', () => {
       expect(scorecard.frames).toEqual([])
       expect(scorecard.currentScore()).toEqual(0)
     })
+
+    it('reverts a scorecard frames to empty after adding some', () => {
+      scorecard.addFrame(2, 2)
+      scorecard.reset()
+
+      expect(scorecard.frames).toEqual([])
+      expect(scorecard.currentScore()).toEqual(0)
+    })
+
+    it('reverts a scorecard frames to empty after readding frames then resetting again', () => {
+      scorecard.addFrame(2, 2)
+      scorecard.reset()
+      scorecard.addFrame(2, 2)
+      scorecard.reset()
+
+      expect(scorecard.frames).toEqual([])
+      expect(scorecard.currentScore()).toEqual(0)
+    })
   })
 
   describe('show', () => {
