@@ -22,6 +22,10 @@ class Scorecard {
     .reduce((sum, num) => sum += num, 0)
   }
 
+  reset() {
+    // this.frames = []
+  }
+
   show() {
     let scoresArray = []
     const framesLength = this.frames.length;

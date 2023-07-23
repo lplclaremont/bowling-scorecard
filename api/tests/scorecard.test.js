@@ -178,6 +178,14 @@ describe('Scorecard', () => {
     })
   })
 
+  describe('reset', () => {
+    it('does not change an empty scorecard', () => {
+      scorecard.reset()
+      expect(scorecard.frames).toEqual([])
+      expect(scorecard.currentScore()).toEqual(0)
+    })
+  })
+
   describe('show', () => {
     it('shows an empty string after no frames', () => {
       expect(scorecard.show()).toEqual({ "scorecard": [] });
@@ -247,5 +255,4 @@ describe('Scorecard', () => {
       expect(scorecard.show()).toEqual(expectedScorecard);
     });
   });
-  
 })
