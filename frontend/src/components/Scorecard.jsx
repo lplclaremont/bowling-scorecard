@@ -18,11 +18,11 @@ const Scorecard = () => {
   
   return (
     <>
+    <AddFrame setFrames={ setFrames }/>
     <div id="frames">
       {frames.map(
         frame => (<Frame frame={ frame.rolls }/>)
       )}
-      <AddFrame setFrames={ setFrames }/>
     </div>
 
     <div id="score">
