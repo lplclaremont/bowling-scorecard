@@ -6,6 +6,10 @@ class Scorecard {
   }
 
   addFrame() {
+    if (this.frames.length >= 10) {
+      throw new Error('Error!')
+    }
+    
     const rolls = Array.from(arguments);
     const frame = new Frame(rolls);
     this.frames.push(frame);

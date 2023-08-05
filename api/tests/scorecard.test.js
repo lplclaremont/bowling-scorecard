@@ -24,6 +24,14 @@ describe('Scorecard', () => {
       expect(scorecard.frames[0].rolls).toEqual([2, 2]);
       expect(scorecard.frames[1].rolls).toEqual([3, 4]);
     })
+
+    it('throws error when adding more than 10 frames', () => {
+      for (let i = 0; i < 10; i++) {
+        scorecard.addFrame(2, 2)
+      }
+      expect(() => {
+        scorecard.addFrame(2, 2)}).toThrow('Error!')
+    })
   })
 
   describe('calculateScore after one frame', () => {
